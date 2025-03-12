@@ -226,7 +226,8 @@ void AWidgetController::DisplayPromotionWidgetUI(bool ToShow)
 {
 	UE_LOG(LogTemp, Warning, TEXT("WidgetController::DisplayPromotionWidgetUI"))  //Log to understand what function is running
 	//this->ChessUI->RemoveFromViewport();  //Remove ChessUIWidget from viewport
-	this->ChessUIComponent->SetVisibility(false);
+	if (ToShow)
+		this->ChessUIComponent->SetVisibility(false);
 
 	if (PromotionWidget == nullptr)  //If PromotionWidget is null we need to create it
 	{

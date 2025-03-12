@@ -39,7 +39,7 @@ void ASceneController::Init()
 			WidgetController = static_cast<AWidgetController*>(World->SpawnActor(AWidgetController::StaticClass()));  //Spawn WidgetController in the scene
 			AChessPlayer* Player = static_cast<AChessPlayer*>(GetWorld()->GetFirstPlayerController()->GetPawn());
 			WidgetController->AttachToComponent(Player->GetCamera(), FAttachmentTransformRules::KeepRelativeTransform);
-			WidgetController->SetActorRelativeLocation(FVector(1000.f, 0.f, 0.f));
+			WidgetController->SetActorRelativeLocation(FVector(900.f, 0.f, 0.f));
 			//WidgetController->SetActorScale3D(FVector(0.2f));
 			WidgetController->Tags.Add("WidgetController");  //Add a tag to the controller to find it when it's necessary
 			UE_LOG(LogTemp, Display, TEXT("Spawned WidgetController."));

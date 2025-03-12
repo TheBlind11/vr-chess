@@ -71,6 +71,6 @@ FString UPromotionWidget::OnBishopButtonClick()
 void UPromotionWidget::RemoveFormView()
 {
 	AWidgetController* WidgetController = Cast<AWidgetController>(Utility::FindByTag(GetWorld(), "WidgetController"));  //Get the widget controller in scene by its tag
-	WidgetController->ShowChessUI(true);  //Reset the viewport with ChessUIWidget
 	WidgetController->DisplayPromotionWidgetUI(false);
+	WidgetController->ShowChessUI(true);  //Reset the viewport with ChessUIWidget
 }
